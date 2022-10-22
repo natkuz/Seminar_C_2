@@ -9,8 +9,7 @@ int threeDigitNumber = int.Parse(Console.ReadLine()!);
 
 int SecondDigitOfNumber(int number)
 {
-    int digit = number / 10 % 10;
-    return digit ;
+    return number / 10 % 10;
 }
 
 int secondDigit = SecondDigitOfNumber(threeDigitNumber);
