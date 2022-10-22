@@ -9,25 +9,15 @@ int anyInteger = int.Parse(Console.ReadLine()!);
 
 int ThirdDigit(int number)
 {
-    int digit = 0;
-
-    if (number < 1000 && number > 99)
+    if (number <= 99)
     {
-        digit = number % 10;
+        return -1;
     }
-    if (number > 1000)
+    while (number > 1000)
     {
-        while (number > 1000)
-        {
-            number = number / 10;
-        }
-        digit = number % 10;
+        number = number / 10;
     }
-    if (number < 99)
-    {
-        digit = -1;
-    }
-    return digit;
+    return number % 10;
 }
 
 int thirdDigit = ThirdDigit(anyInteger);
