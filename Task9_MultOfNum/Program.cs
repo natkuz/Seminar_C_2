@@ -10,18 +10,14 @@ int numToCheckMultiplicity = int.Parse(Console.ReadLine()!);
 
 string CheckMultiplicity(int number)
 {
-    string multiple = "-1";
-
     if (number % 7 == 0 && number % 23 == 0 && number != 0)
     {
-        multiple = "Yes, the number is a multiple 7 and 23";
+        return "Yes, the number is a multiple 7 and 23";
     }
     else
     {
-        multiple = "No, the number is not a multiple 7 and 23";
+        return "No, the number is not a multiple 7 and 23";
     }
-
-    return multiple;
 }
 
 string checkMultiplicity = CheckMultiplicity(numToCheckMultiplicity);
