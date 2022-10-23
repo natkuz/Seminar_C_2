@@ -9,21 +9,18 @@ int dayOfWeek = int.Parse(Console.ReadLine()!);
 
 string DayOff(int number)
 {
-    string dayOff = "Yes, this day is a holiday";
-
     if (number > 5 && number < 8)
     {
-        dayOff = "Yes, this day is a holiday";
+        return "Yes, this day is a holiday";
     }
-    if (number >0 && number < 6)
+    else if (number > 0 && number < 6)
     {
-        dayOff = "No, this day is not a holiday";
+        return "No, this day is not a holiday";
     }
-    if (number < 1 || number > 7)
+    else
     {
-        dayOff = "Number is not a day of the week";
-    }
-    return dayOff;
+        return "Number is not a day of the week";
+    } 
 }
 
 string day = DayOff(dayOfWeek);
